@@ -1,0 +1,145 @@
+/* Начальные стили */
+html {
+    font-size: 10px;
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 3.2rem;
+    margin: 0;
+    padding: 0;
+    background-color:rgb(234, 255, 232);
+}
+
+/* Контент */
+h1 {
+    text-align: center;
+    padding: 10px;
+	margin: 0;
+}
+.content {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 70%;
+    margin: auto;
+}
+.content img, .content .alarm-block{
+    border: 2px solid rgb(113, 156, 109);
+    /*border-radius: 10px;*/
+    margin-right: 20px;
+}
+.video-feed {
+    display: block;
+    width: 320px;
+    height: 280px;
+    margin: 15px;
+}
+#person {
+    color: red;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px;
+}
+
+/* Стили блока сообщения о выстреле */
+.alarm-block {
+    padding: 15px;
+    margin: 15px;
+    height: auto;
+    width: 100%;
+    background-color: rgb(255, 250, 229);
+    align-self: center;
+    visibility: hidden;
+    width: 290px;
+}
+.alarm-block p {
+    text-align: center;
+    font-weight: bold;
+}
+.alarm-block .buttons {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+}
+.button-fire, .button-reject {
+    height: 100px;
+    font-size: 4.2rem;
+}
+.button-fire {
+	background-color: tomato; /* Red */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    outline: none;
+}
+.button-fire:hover {
+    background-color: rgb(255, 154, 136);
+}
+
+.button-reject {
+	
+	background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    outline: none;
+}
+.button-reject:hover {
+    background-color: #80b682;
+}
+
+.control-block {
+    display: flex;
+    align-items: space-around;
+}
+
+@media screen and (min-width: 600px) {
+    .video-feed {
+        width: 600px;
+        height: 400px;
+    }
+    .alarm-block {
+        width: 570px;
+    }
+    .button-fire, .button-reject {
+        width: 200px;
+        height: 200px;
+        font-size: 5.4rem;
+    }
+}
+
+@media screen and (min-width: 980px) {
+    .alarm-block {
+        width: 770px;
+    }
+    .button-fire, .button-reject {
+        width: 300px;
+        height: 300px;
+        font-size: 6.4rem;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+
+    body {
+        font-size: 1.6rem;
+    }
+    .button-fire, .button-reject {
+        font-size: 1.6rem;
+        height: auto;
+    }
+    /*.content {
+        flex-direction: row;
+    }*/
+    .alarm-block {
+        width: 200px;
+    }
+}
